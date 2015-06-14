@@ -4,7 +4,3 @@ Despite merely being a group that organises social events for horse show fans, w
 This openness is now translating to our code. Hosted in public on GitHub, it gives people unprecedented access into the things that make our organisation tick. 
 
 Feel free to read, learn from, and fork our code. 
-
-**Other open repositories:**
-* [bristolbronies-patterns](https://github.com/querkmachine/bristolbronies-patterns): A experimental testbed of sorts. 
-* [bristolbronies-stream](https://github.com/querkmachine/bristolbronies-stream): Our livestreaming interface for major events. 
