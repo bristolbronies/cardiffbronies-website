@@ -42,8 +42,7 @@
 	<script src="<?php echo get_template_directory_uri(); ?>/dst/js/preload.js"></script>
 
 	<!-- Page title -->
-	<title>
-		<?php 
+	<title><?php 
 		if(is_front_page()):
 			bloginfo("name");
 			echo " | "; 
@@ -53,8 +52,7 @@
 			echo " | ";
 			bloginfo("name");
 		endif;
-		?>
-	</title>
+		?></title>
 
 </head>
 <body>

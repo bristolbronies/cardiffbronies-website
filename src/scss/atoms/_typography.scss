@@ -1,15 +1,19 @@
 @mixin body-font {
-	font-family: Georgia, serif;
+	font-family: "Source Sans Pro", "Helvetica Neue", Arial, "Liberation Sans", sans-serif;
 	font-size: $base-font-size;
+	font-weight: 300;
 	line-height: 1.25;
 	@include mq(tng, true) {
 		line-height: 1.375;
 	}
+	strong {
+		font-weight: 400;
+	}
 }
 
 @mixin header-font {
-	font-family: sans-serif;
-	font-weight: bold;
+	font-family: Lato, sans-serif;
+	font-weight: 900;
 }
 
 @mixin header-1 {

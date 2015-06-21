@@ -3,7 +3,7 @@
 	get_template_part('partials/global/header');
 ?>
 
-	<main class="body" role="main">
+	<main class="body" id="content" role="main">
 
 	</main>
 

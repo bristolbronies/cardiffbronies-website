@@ -1,0 +1,30 @@
+.header {
+	@include clearfix;
+	position: relative;
+	z-index: 2;
+	border-bottom: 1px solid palette(shade, light);
+	background-color: palette(shade, white);
+	&--sticky {
+		position: fixed;
+		top: 0;
+		right: 0;
+		left: 0;
+	}
+	&__branding {
+		@include header-font;
+		float: left;
+		text-transform: uppercase;
+		a {
+			display: inline-block;
+			padding: 10px;
+			color: palette(shade, black);
+			font-size: em-calc(21px);
+			text-decoration: none;
+			line-height: 1;
+			&:hover,
+			&:focus {
+				color: palette(brand, primary);
+			}
+		}
+	}
+}

@@ -8,13 +8,25 @@ $breakpoints: (
 );
 
 // Font size
-$base-font-size: 18px;
+$base-font-size: 16px;
 
 // Colour scheme
 $palette: (
 	brand: (
+		primary: #e02437,
+		secondary: #c22333,
+		faded: #a2a2aa
 	),
 	section: (
+		feeds: #ff5722,
+		izzie: #2196f3,
+		donations: #4caf50,
+		documentation: #607d8b
+	),
+	staff: (
+		administration: #009688,
+		meet-operations: #4caf50,
+		public-relations: #8bc34a
 	),
 	context: (
 		accessibility: #fc0,
@@ -24,11 +36,13 @@ $palette: (
 	),
 	shade: (
 		white: #fff,
-		x-light: #eaeaee,
+		lightest: #eaeaee,
+		lighter: #dedede,
 		light: #c7c7cc,
 		base: #727277,
 		dark: #424244,
-		x-dark: #202022,
-		black: #000
+		darker: #353535,
+		darkest: #202022,
+		black: #202022
 	)
 );
