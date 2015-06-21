@@ -9,6 +9,10 @@
 	font-style: normal;
 }
 
+.icon-label {
+	@include hidden;
+}
+
 .icon {
 	font-family: 'Icons';
 	font-style: normal;
