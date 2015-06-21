@@ -25,6 +25,9 @@
 	-moz-osx-font-smoothing: grayscale;
 }
 
+.icon--donate:before {
+	content: "\e024";
+}
 .icon--search:before {
 	content: "\e036";
 }

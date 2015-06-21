@@ -1,0 +1,17 @@
+.layout {
+	width: 94%;
+	margin-right: auto;
+	margin-left: auto;
+	@include mq(tos) {
+		max-width: 580px;
+	}
+	@include mq(tng) {
+		max-width: 750px;
+	}
+	@include mq(ds9) {
+		max-width: 980px;
+	}
+	@include mq(voy, true) {
+		max-width: 1260px;
+	}
+}

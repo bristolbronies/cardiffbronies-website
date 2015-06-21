@@ -1,37 +1,11 @@
 .navigation {
-	&__toggler {
-		display: inline-block;
-		padding: 10px;
-		border-left: 1px solid palette(shade, light);
-		float: right;
-		color: palette(shade, black);
-		font-size: em-calc(21px);
-		text-transform: uppercase;
-		text-decoration: none;
-		line-height: 1;
-		transition: background-color .3s ease;
-		&:hover,
-		&:focus {
-			background-color: palette(shade, lightest);
-		}
-		&__icon {
-			position: relative;
-			top: 2px;
-			color: palette(shade, base);
-		}
+	background-color: palette(shade, white);
+	transform: translateY(-100%);
+	transition: transform .5s cubic-bezier(.770, 0, .175, 1);
+	&--active {
+		transform: translateY(0);
 	}
 	&__menu {
-		position: absolute;
-		top: 100%;
-		right: 0;
-		left: 0;
-		z-index: 0;
-		clear: left;
-		transform: translateY(-100%);
-		transition: transform .5s ease;
-		&--open {
-			transform: translateY(0);
-		}
 	}
 	&__list {
 		&--primary {
@@ -42,8 +16,52 @@
 		}
 	}
 	&__item {
+		border-bottom: 1px solid palette(shade, lightest);
 		&--current {
 
 		}
+		a {
+			display: block;
+			padding: 10px;
+			padding-right: 35px;
+			position: relative;
+			color: palette(shade, base);
+			text-transform: uppercase;
+			text-decoration: none;
+			&:hover,
+			&:focus {
+				color: palette(shade, darker);
+				.navigation__icon {
+					color: palette(brand, primary);
+				}
+			}
+		}
+	}
+	&__icon {
+		position: absolute;
+		top: 13px;
+		right: 10px;
+	}
+}
+
+.navigation-toggler {
+	display: inline-block;
+	height: 44px;
+	padding: 10px;
+	border-left: 1px solid palette(shade, lightest);
+	float: right;
+	color: palette(shade, black);
+	font-size: em-calc(21px);
+	text-transform: uppercase;
+	text-decoration: none;
+	&:hover,
+	&:focus,
+	&--active {
+		background-color: palette(shade, lightest);
+	}
+	&__icon {
+		position: relative;
+		top: 2px;
+		color: palette(shade, base);
 	}
 }

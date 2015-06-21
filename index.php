@@ -4,7 +4,9 @@
 ?>
 
 	<main class="body" id="content" role="main">
-
+		<div class="layout">
+			example content
+		</div>
 	</main>
 
 <?php
