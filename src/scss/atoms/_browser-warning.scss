@@ -1,0 +1,21 @@
+.browser-warning {
+	min-height: 70px;
+	margin-top: -10px;
+	margin-bottom: 10px;
+	padding: 10px;
+	padding-left: 70px;
+	background-color: palette(shade, lightest);
+	background-image: url("../images/logo-outline.svg");
+	background-repeat: no-repeat;
+	background-position: 10px 10px;
+	background-size: 50px 50px;
+	a {
+		color: inherit;
+		font-weight: 600;
+		text-decoration: none;
+		&:hover,
+		&:focus {
+			text-decoration: underline;
+		}
+	}
+}

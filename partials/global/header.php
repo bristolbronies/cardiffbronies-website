@@ -31,3 +31,7 @@
 			</div>
 		</nav>
 	</header>
+
+	<!--[if lt IE 9]>
+		<div class="browser-warning">Your web browser is old. So old. Old as <a href="http://www.harkavagrant.com/?id=259">balls</a>. Your browser is an  functional and security nightmare wrapped up in an executable and we don't want to touch it with a ten foot bargepole. Do the world a favour and <a href="outdatedbrowser.com/en">download a <em>real</em> web browser</a> for the best web experience.</div>
+	<![endif]-->

@@ -57,10 +57,6 @@
 </head>
 <body>
 
-	<!--[if lt IE 9]>
-		<div class="browser-warning">You are using an outdated browser that this website wasn't built to support. Functionality and layout may be broken and unusable. Please <a href="http://outdatedbrowser.com/en">upgrade your browser</a> if you are able.</div>
-	<![endif]-->
-
 	<ul class="accessibility-links">
 		<li><a href="#navigation">Skip to navigation</a></li>
 		<li><a href="#content">Skip to content</a></li>
