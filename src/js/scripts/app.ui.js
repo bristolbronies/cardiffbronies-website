@@ -54,8 +54,6 @@ app.navigation.stickyNavigation = {
 	}
 };
 
-
-
 $(document).ready(function() {
 	app.navigation.mobileNavigation.bindControls();
 	app.navigation.stickyNavigation.init();

@@ -1,9 +1,8 @@
 <?php
 
-/** 
- * Custom navigation output
+/**
+ * Custom navigation walker
  */
-
 class bb_navigation_walker extends Walker_Nav_Menu {
 	public function start_el(&$output, $item, $depth = 0, $args = array(), $id = 0) {
 		// print_r($item);

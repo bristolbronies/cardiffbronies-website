@@ -19,7 +19,13 @@
 		color: palette(shade, light);
 	}
 	ins {
-		text-decoration: underline;
+		font-weight: 600;
+		text-decoration: none;
+	}
+	blockquote {
+		margin-left: 20px;
+		padding-left: 20px;
+		border-left: 1px solid palette(shade, lighter);
 	}
 	a {
 		border-bottom: 2px solid palette(shade, lighter);
