@@ -23,7 +23,9 @@
 		text-transform: uppercase;
 		&:hover,
 		&:focus {
-			color: palette(brand, primary);
+			height: 45px;
+			margin-bottom: -1px;
+			border-bottom: 4px solid palette(brand, primary);
 		}
 	}
 	&__bar {
