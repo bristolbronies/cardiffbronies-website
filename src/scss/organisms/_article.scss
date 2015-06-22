@@ -1,7 +1,9 @@
 .article {
 	max-width: 42em;
-	margin-right: auto;
-	margin-left: auto;
+	margin: 20px auto;
+	@include mq(tng, true) {
+		margin-top: 40px;
+	}
 	&__header {
 		margin-bottom: 20px;
 	}
@@ -9,9 +11,11 @@
 		@include header-janeway;
 	}
 	&__body {
-		font-size: em-calc(18px);
+		font-size: em-calc(16px);
+		line-height: em-calc(22px, 16px);
 		@include mq(tng, true) {
-			font-size: em-calc(20px);
+			font-size: em-calc(17px);
+			line-height: em-calc(25px, 17px);
 		}
 	}
 }
