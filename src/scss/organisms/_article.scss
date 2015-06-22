@@ -1,9 +1,6 @@
 .article {
 	max-width: 42em;
-	margin: 20px auto;
-	@include mq(tng, true) {
-		margin-top: 40px;
-	}
+	margin: 0 auto 20px;
 	&__header {
 		margin-bottom: 20px;
 	}

@@ -6,3 +6,10 @@ body {
 	color: palette(shade, x-dark);
 	background-color: transparent;
 }
+
+.body {
+	margin-top: 10px;
+	@include mq(tng, true) {
+		margin-top: 40px;
+	}
+}
