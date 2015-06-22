@@ -1,0 +1,17 @@
+.article {
+	max-width: 42em;
+	margin-right: auto;
+	margin-left: auto;
+	&__header {
+		margin-bottom: 20px;
+	}
+	&__title {
+		@include header-janeway;
+	}
+	&__body {
+		font-size: em-calc(18px);
+		@include mq(tng, true) {
+			font-size: em-calc(20px);
+		}
+	}
+}

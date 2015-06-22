@@ -5,7 +5,7 @@
 
 	<main class="body" id="content" role="main">
 		<div class="layout">
-			example content
+			<!-- blank template -->
 		</div>
 	</main>
 

@@ -13,7 +13,7 @@
 	font-weight: 900;
 }
 
-@mixin header-1 {
+@mixin header-janeway {
 	@include header-font;
 	font-size: 2em;
 	line-height: 1.25;
@@ -27,7 +27,7 @@
 	}
 }
 
-@mixin header-2 {
+@mixin header-sisko {
 	@include header-font;
 	font-size: 1.375em;
 	font-style: italic;
@@ -43,18 +43,18 @@
 	}
 }
 
-@mixin header-3 {
+@mixin header-picard {
 	@include header-font;
 	text-transform: uppercase;
 }
 
-@mixin header-4 {
+@mixin header-kirk {
 	@include header-font;
 	font-size: .9375em;
 	text-transform: uppercase;
 }
 
-@mixin header-5 {
+@mixin header-archer {
 	@include header-font;
 	font-size: .833333333em;
 	font-weight: normal;

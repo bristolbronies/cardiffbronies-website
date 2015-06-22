@@ -1,0 +1,11 @@
+.content {
+	p, ul, ol, dl {
+		margin-top: 20px;
+		margin-bottom: 20px;
+	}
+	em strong,
+	strong em {
+		font-weight: 600;
+		font-style: italic;
+	}
+}
