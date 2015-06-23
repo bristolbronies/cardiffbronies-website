@@ -42,17 +42,7 @@
 	<script src="<?php echo get_template_directory_uri(); ?>/dst/js/preload.js"></script>
 
 	<!-- Page title -->
-	<title><?php 
-		if(is_front_page()):
-			bloginfo("name");
-			echo " | "; 
-			bloginfo("description");
-		else:
-			wp_title("", true, "right");
-			echo " | ";
-			bloginfo("name");
-		endif;
-		?></title>
+	<title><?php bb_page_title(); ?></title>
 
 </head>
 <body>
