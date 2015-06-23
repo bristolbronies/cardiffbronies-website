@@ -29,6 +29,7 @@
 		&--left {
 			@include mq(tos, true) {
 				max-width: 170px;
+				margin-top: 0; // Floating images makes top margin no longer collapse, so remove it
 				margin-right: 20px;
 				float: left;
 				clear: left;
@@ -40,6 +41,7 @@
 		&--right {
 			@include mq(tng, true) {
 				max-width: 300px;
+				margin-top: 0; // Floating images makes top margin no longer collapse, so remove it
 				margin-left: 20px;
 				float: right;
 				clear: right;
@@ -62,9 +64,6 @@
 			@include mq(voy, true) {
 				margin-right: -320px;
 			}
-		}
-		&--none {
-			clear: both;
 		}
 	}
 }
