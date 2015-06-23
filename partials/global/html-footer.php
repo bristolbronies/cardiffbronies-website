@@ -6,7 +6,7 @@
 	<script type="text/javascript">
 		WebFontConfig = {
 			google: { 
-				families: [ 'Source+Sans+Pro:300,400,300italic,400italic:latin', 'Lato:900:latin' ] 
+				families: [ 'Source+Sans+Pro:300,400,300italic,400italic:latin', 'Lato:900,900italic:latin' ] 
 			},
 			custom: { 
 				families: [ 'Icons' ], 

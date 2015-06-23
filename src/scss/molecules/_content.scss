@@ -2,7 +2,13 @@
 	p, 
 	ul, 
 	ol, 
-	dl {
+	dl,
+	h1,
+	h2,
+	h3,
+	h4,
+	h5,
+	h6 {
 		margin-top: 20px;
 		margin-bottom: 20px;
 	}
@@ -21,6 +27,22 @@
 	ins {
 		font-weight: 600;
 		text-decoration: none;
+	}
+	h1, 
+	h2 {
+		@include header-sisko;
+	}
+	h3 {
+		@include header-picard;
+	}
+	h4 {
+		@include header-kirk;
+	}
+	h5 {
+		@include header-archer;
+	}
+	h6 {
+		@include header-pike;
 	}
 	blockquote {
 		margin-left: 20px;

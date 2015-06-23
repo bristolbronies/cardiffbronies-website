@@ -44,22 +44,29 @@
 }
 
 @mixin header-picard {
-	@include header-font;
+	@include body-font;
 	text-transform: uppercase;
 }
 
 @mixin header-kirk {
-	@include header-font;
-	font-size: .9375em;
+	@include body-font;
+	font-size: em-calc(18px, 16px);
+	font-weight: 600;
 	text-transform: uppercase;
+	@include mq(tng, true) {
+		font-size: em-calc(20px, 17px);
+	}
 }
 
 @mixin header-archer {
-	@include header-font;
-	font-size: .833333333em;
-	font-weight: normal;
-	text-transform: uppercase;
-	letter-spacing: 1px;
+	@include body-font;
+	font-weight: 600;
+}
+
+@mixin header-pike {
+	@include body-font;
+	font-size: em-calc(12px);
+	font-weight: 600;
 }
 
 body {
