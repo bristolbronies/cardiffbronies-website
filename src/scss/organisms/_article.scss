@@ -1,6 +1,14 @@
 .article {
-	max-width: 42em;
-	margin: 0 auto 20px;
+	margin-bottom: 20px;
+	@include mq(tng, true) {
+		margin-left: 190px;
+	}
+	@include mq(ds9) {
+		margin-right: 240px;
+	}
+	@include mq(voy, true) {
+		margin-right: 320px;
+	}
 	&__header {
 		margin-bottom: 20px;
 	}
@@ -13,6 +21,50 @@
 		@include mq(tng, true) {
 			font-size: em-calc(17px);
 			line-height: em-calc(25px, 17px);
+		}
+	}
+	&__media {
+		margin-top: 20px;
+		margin-bottom: 20px;
+		&--left {
+			@include mq(tos, true) {
+				max-width: 170px;
+				margin-right: 20px;
+				float: left;
+				clear: left;
+			}
+			@include mq(tng, true) {
+				margin-left: -190px;
+			}
+		}
+		&--right {
+			@include mq(tng, true) {
+				max-width: 300px;
+				margin-left: 20px;
+				float: right;
+				clear: right;
+			}
+			@include mq(ds9) {
+				margin-right: -240px;
+			}
+			@include mq(voy, true) {
+				margin-right: -320px;
+			}
+		}
+		&--center {
+			clear: both;
+			@include mq(tng, true) {
+				margin-left: -190px;
+			}
+			@include mq(ds9) {
+				margin-right: -240px;
+			}
+			@include mq(voy, true) {
+				margin-right: -320px;
+			}
+		}
+		&--none {
+			clear: both;
 		}
 	}
 }

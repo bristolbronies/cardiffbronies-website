@@ -31,9 +31,9 @@ add_filter("image_send_to_editor", "bb_image_insertion", 10, 9);
 /**
  * Define desired image resizes
  */
-	add_image_size('article-large', 1400, 9999);
-	add_image_size('article-medium', 1000, 9999);
-	add_image_size('article-small', 300, 9999);
+add_image_size('article-large', 1400, 9999);
+add_image_size('article-medium', 1000, 9999);
+add_image_size('article-small', 600, 9999);
 
 /**
  * Build responsive image sources.
@@ -81,8 +81,9 @@ function bb_responsive_image_shortcode($attributes) {
 		$size2 => "article-medium",
 		$size3 => "article-large"
 	);
+	if($align === "centre") { $align = "center"; }
 	return '
-		<div class="article__image article__image--' . $align . '">
+		<div class="article__media article__media--' . $align . '">
 			<picture>
 				<!--[if IE 9]><video style="display:none;"><[endif]-->'
 				. bb_responsive_image($id, $mappings) .
