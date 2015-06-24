@@ -57,7 +57,7 @@
 		right: 0;
 		bottom: 0;
 		left: 0;
-		background-image: linear-gradient(135deg, rgba(palette(shade, black), .8) 0%, rgba(palette(shade, black), 0) 60%);
+		background-image: linear-gradient(135deg, rgba(palette(shade, black), .95) 0%, rgba(palette(shade, black), 0) 60%);
 		transition: box-shadow .3s ease;
 		@include mq(tos, true) {
 			padding: 20px;
