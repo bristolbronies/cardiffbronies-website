@@ -19,10 +19,11 @@
 		color: palette(shade, white);
 		&:hover,
 		&:focus {
-			.meet-grid__title {
-				&:after {
-					right: 0;
-				}
+			.meet-grid__body {
+				box-shadow: inset 0 0 4em 0 rgba(palette(shade, black), .5);
+			}
+			.meet-grid__image {
+				transform: scale(1.05);
 			}
 		}
 	}
@@ -32,6 +33,7 @@
 		right: 0;
 		bottom: 0;
 		left: 0;
+		transition: transform .3s ease;
 		img {
 			width: 100%;
 			height: 100%;
@@ -50,7 +52,8 @@
 		right: 0;
 		bottom: 0;
 		left: 0;
-		background-image: linear-gradient(135deg, rgba(palette(shade, black),0.8) 0%, rgba(palette(shade, black),0) 60%);
+		background-image: linear-gradient(135deg, rgba(palette(shade, black), .8) 0%, rgba(palette(shade, black), 0) 60%);
+		transition: box-shadow .3s ease;
 		@include mq(tos, true) {
 			padding: 20px;
 		}
@@ -61,15 +64,6 @@
 		width: 85%;
 		max-width: 380px;
 		position: relative;
-		&:after {
-			content: "";
-			position: absolute;
-			bottom: -3px;
-			left: 0;
-			right: 100%;
-			border-bottom: 2px solid palette(shade, white);
-			transition: right .3s ease;
-		}
 	}
 	&__date {
 		display: block;
