@@ -34,8 +34,6 @@
 						if(has_post_thumbnail()):
 							$image_url = wp_get_attachment_image_src(get_post_thumbnail_id(), "full");
 							$image_url = $image_url[0];
-						// elseif(strlen($custom_image_url = get_theme_mod("bb_homepage_banner_image")) > 0):
-						// 	$image_url = $custom_image_url;
 						else: 
 							$image_url = "//placeponi.es/1280/720";
 						endif; 
