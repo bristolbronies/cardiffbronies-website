@@ -32,14 +32,12 @@
 	font-size: 1.375em;
 	font-style: italic;
 	text-transform: uppercase;
-	line-height: 1.13636364;
+	line-height: 1.1;
 	@include mq(tng) {
 		font-size: 1.5em;
-		line-height: 1.25;
 	}
 	@include mq(ds9, true) {
 		font-size: 1.75em;
-		line-height: 1.25;
 	}
 }
 

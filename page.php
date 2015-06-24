@@ -1,4 +1,7 @@
 <?php
+	/*
+		Template Name: Page - Generic
+	*/
 	get_template_part('partials/global/html-header');
 	get_template_part('partials/global/header');
 ?>

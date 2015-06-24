@@ -1,5 +1,5 @@
 <!doctype html>
-<html class="no-js" <?php language_attributes(); ?>>
+<html lang="en-GB" dir="ltr" class="no-js">
 <head>
 
 	<!-- Technical metadata-->
