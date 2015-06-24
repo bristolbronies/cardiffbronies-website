@@ -26,6 +26,11 @@
 				transform: scale(1.05);
 			}
 		}
+		&:focus {
+			.meet-grid__title {
+				outline: 3px solid palette(context, accessibility);
+			}
+		}
 	}
 	&__image {
 		position: absolute;
