@@ -1,6 +1,10 @@
 .template-homepage {
 	&__meet-grid {
+		margin-top: -10px;
 		margin-bottom: 20px;
+		@include mq(tng, true) {
+			margin-top: -40px;
+		}
 	}
 	&__intro {
 		max-width: 45em;
