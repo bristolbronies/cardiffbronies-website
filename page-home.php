@@ -61,17 +61,10 @@
 		<div class="template-homepage__intro">
 			<?php echo $home_blurb; ?>
 		</div>
-		<div class="social-feed template-homepage__social-feed">
-			<div class="social-feed__item">
-				<a class="social-feed__source social-feed__source--twitter" href="#">Twitter</a>
-				<div class="social-feed__body">
-					<div class="content social-feed__content">
-
-					</div>
-					<time class="social-feed__timestamp" datetime=""></time>
-				</div>
+		<div class="template-homepage__social-feed">
+			<div class="layout">
+				<?php bb_tweet_feed("bristolbronies", 15); ?>
 			</div>
-
 		</div>
 	</main>
 

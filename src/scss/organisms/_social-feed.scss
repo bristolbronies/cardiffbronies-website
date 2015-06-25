@@ -1,17 +1,44 @@
 .social-feed {
+	max-width: 1140px;
+	margin-right: auto;
+	margin-left: auto;
 	&__item {
-
-	}
-	&__source {
-
+		display: inline-block;
+		width: 100%;
+		margin-bottom: 11px;
+		padding: 10px 20px;
+		border-top: 2px solid palette(shade, black);
+		position: relative;
+		text-align: left;
+		vertical-align: top;
+		@include mq(tos, true) {
+			width: 49%;
+			margin-right: .5%;
+			margin-left: .5%;
+		}
+		@include mq(tng, true) {
+			width: 32.3333%;
+		}
+		@include mq(ds9, true) {
+			width: 24%;
+		}
+		&--twitter {
+			border-color: palette(social, twitter);
+		}
+		&--facebook {
+			color: palette(shade, white);
+			border-color: palette(social, facebook);
+		}
 	}
 	&__body {
-
 	}
-	&__content {
-
+	&__permalink {
+		color: palette(shade, base);
+		text-decoration: none;
 	}
 	&__timestamp {
-		
+		font-style: italic;
+	}
+	&__content {
 	}
 }
