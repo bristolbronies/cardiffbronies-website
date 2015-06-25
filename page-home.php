@@ -24,9 +24,8 @@
 	<main class="body" id="content" role="main">
 		<?php 
 			if($meet_query->have_posts()): 
-				// print_r($meet_query);
 		?>
-		<div class="meet-grid meet-grid--items-<?php echo $meet_query->post_count; ?>">
+		<div class="meet-grid meet-grid--items-<?php echo $meet_query->post_count; ?> template-homepage__meet-grid">
 			<div class="layout">
 				<?php
 					$index = 0;
@@ -59,6 +58,21 @@
 		<?php 
 			endif; 
 		?>
+		<div class="template-homepage__intro">
+			<?php echo $home_blurb; ?>
+		</div>
+		<div class="social-feed template-homepage__social-feed">
+			<div class="social-feed__item">
+				<a class="social-feed__source social-feed__source--twitter" href="#">Twitter</a>
+				<div class="social-feed__body">
+					<div class="content social-feed__content">
+
+					</div>
+					<time class="social-feed__timestamp" datetime=""></time>
+				</div>
+			</div>
+
+		</div>
 	</main>
 
 <?php
