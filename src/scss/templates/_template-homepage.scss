@@ -1,5 +1,6 @@
 .template-homepage {
-	&__meet-grid {
+	&__meet-grid,
+	&__banner {
 		margin-top: -10px;
 		margin-bottom: 20px;
 		@include mq(tng, true) {

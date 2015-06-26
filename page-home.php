@@ -56,6 +56,17 @@
 			</div>
 		</div>
 		<?php 
+			else:
+				$custom_image_url = get_theme_mod("bb_homepage_banner_image");
+		?>
+			<div class="banner template-homepage__banner">
+				<div class="banner__image">
+					<picture>
+						<img srcset="<?php echo $custom_image_url; ?>" alt="">
+					</picture>
+				</div>
+			</div>
+		<?php 
 			endif; 
 		?>
 		<div class="template-homepage__intro">
