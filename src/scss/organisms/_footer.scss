@@ -2,17 +2,64 @@
 	border-top: 1px solid palette(shade, lightest);
 	&__billboards {
 		@include clearfix;
-		.cta {
-			height: 160px;
+		.billboard {
 			border-bottom: 1px solid palette(shade, lightest);
+			&__link {
+				height: 160px;
+				@include mq(tos, true) {
+					height: 200px;
+				}
+				@include mq(tng, true) {
+					height: 160px;
+				}
+			}
 			@include mq(tos, true) {
 				width: 50%;
+				height: 200px;
 				float: left;
 				border-bottom: none;
 				&:first-child { 
 					border-right: 1px solid palette(shade, lightest);
+					.billboard__body {
+						float: right;
+					}
 				}
 			}
+			@include mq(tng, true) {
+				height: 160px;
+			}
+		}
+	}
+	&__boilerplate {
+		padding: 20px;
+		border-top: 1px solid palette(shade, lightest);
+		color: palette(shade, base);
+		text-align: center;
+		a {
+			color: inherit;
+			text-decoration: none;
+			&:hover,
+			&:focus {
+				text-decoration: underline; 
+			}
+		}
+	}
+	&__legal {
+		display: block;
+		max-width: 600px;
+		margin-right: auto;
+		margin-left: auto;
+		margin-bottom: 10px;
+		font-size: em-calc(13px);
+	}
+	&__legal-links {
+		list-style: none;
+		li {
+			display: inline-block;
+			margin: 0 .5em;
+		}
+		a {
+			text-transform: uppercase;
 		}
 	}
 }

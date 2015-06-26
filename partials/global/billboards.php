@@ -4,12 +4,14 @@
 		while($billboards->have_posts()): $billboards->the_post();
 			$image_url = get_field("billboard_image"); 
 ?>
-			<aside class="cta">
-				<a class="cta__link" href="<?php echo get_field("billboard_url"); ?>">
-					<img alt="" src="<?php echo $image_url['url']; ?>">
-					<h1 class="cta__title"><?php the_title(); ?></h1>
-					<div class="content cta__body">
-						<?php the_excerpt(); ?>
+			<aside class="billboard">
+				<a class="billboard__link" href="<?php echo get_field("billboard_url"); ?>">
+					<div class="billboard__body">
+						<img class="billboard__image" alt="" src="<?php echo $image_url['url']; ?>">
+						<h1 class="billboard__title"><?php the_title(); ?></h1>
+						<div class="content billboard__content">
+							<?php the_excerpt(); ?>
+						</div>
 					</div>
 				</a>
 			</aside>
