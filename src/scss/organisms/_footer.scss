@@ -1,0 +1,18 @@
+.footer {
+	border-top: 1px solid palette(shade, lightest);
+	&__billboards {
+		@include clearfix;
+		.cta {
+			height: 160px;
+			border-bottom: 1px solid palette(shade, lightest);
+			@include mq(tos, true) {
+				width: 50%;
+				float: left;
+				border-bottom: none;
+				&:first-child { 
+					border-right: 1px solid palette(shade, lightest);
+				}
+			}
+		}
+	}
+}
