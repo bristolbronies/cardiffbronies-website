@@ -74,7 +74,7 @@
 		</div>
 		<div class="template-homepage__social-feed">
 			<div class="layout">
-				<?php bb_tweet_feed("bristolbronies", 15); ?>
+				<?php bb_social_feed("bristolbronies", "443693042356765", 8); ?>
 			</div>
 		</div>
 	</main>

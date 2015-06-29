@@ -2,6 +2,7 @@
 	max-width: 1140px;
 	margin-right: auto;
 	margin-left: auto;
+	text-align: center;
 	&__item {
 		display: inline-block;
 		width: 100%;
@@ -13,8 +14,6 @@
 		vertical-align: top;
 		@include mq(tos, true) {
 			width: 49%;
-			margin-right: .5%;
-			margin-left: .5%;
 		}
 		@include mq(tng, true) {
 			width: 32.3333%;
@@ -26,7 +25,6 @@
 			border-color: palette(social, twitter);
 		}
 		&--facebook {
-			color: palette(shade, white);
 			border-color: palette(social, facebook);
 		}
 	}
@@ -40,5 +38,18 @@
 		font-style: italic;
 	}
 	&__content {
+		height: 142px;
+		position: relative;
+		overflow: hidden;
+		&:after {
+			content: "";
+			height: 2.5em;
+			position: absolute;
+			right: 0;
+			bottom: 0;
+			left: 0;
+			background-image: linear-gradient(to bottom, rgba(255,255,255,0) 0%,rgba(255,255,255,1) 80%);
+			pointer-events: none;
+		}
 	}
 }
