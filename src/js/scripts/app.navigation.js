@@ -33,6 +33,12 @@ app.navigation.stickyNavigation = {
 		}
 		this.lastScrollPos = scrollPos;
 	},
+	bindEvents: function() {
+		var self = this;
+		$("[data-header] a").on("focus", function(e) {
+			self.show();
+		});
+	},
 	glue: function() {
 		if($("[data-header].header--sticky").length === 0) {
 			this.$header.addClass("header--sticky");
@@ -57,6 +63,7 @@ app.navigation.stickyNavigation = {
 $(document).ready(function() {
 	app.navigation.mobileNavigation.bindControls();
 	app.navigation.stickyNavigation.init();
+	app.navigation.stickyNavigation.bindEvents();
 });
 
 $(window).scroll(function() {
