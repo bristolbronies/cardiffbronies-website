@@ -20,9 +20,18 @@
 						<?php 
 							$runners = get_field('meet_runner'); 
 							$runners_count = count($runners);
+							$runners_grid = ($runners_count > 4) ? 4 : $runners_count;
 						?>
 						<li class="metadata__item">
-							<img alt="" src="<?php echo bb_profile_avatar($runners[0]); ?>" class="metadata__image">
+							<div class="avatar-grid avatar-grid--items-<?php echo $runners_grid; ?> metadata__image">
+								<?php 
+									for($i = 0; $i < $runners_grid; $i++):
+								?>
+										<img class="avatar-grid__item" alt="<?php echo get_the_title($runners[$i]); ?>" src="<?php echo bb_profile_avatar($runners[$i]); ?>">
+								<?php 
+									endfor;
+								?>
+							</div>
 							<strong class="metadata__title">
 								<?php 
 									if($runners_count == 1):
