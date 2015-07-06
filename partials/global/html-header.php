@@ -45,7 +45,7 @@
 	<title><?php bb_page_title(); ?></title>
 
 </head>
-<body>
+<body id="top">
 
 	<ul class="accessibility-links">
 		<li><a href="#navigation">Skip to navigation</a></li>

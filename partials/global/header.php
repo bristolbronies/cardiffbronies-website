@@ -1,4 +1,4 @@
-	<header class="header" id="top" role="banner" data-header>
+	<header class="header" role="banner" data-header>
 		<div class="header__bar">
 			<a href="/" class="header__branding">
 				<?php bloginfo("blogname"); ?>
