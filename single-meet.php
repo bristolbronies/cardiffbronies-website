@@ -22,8 +22,7 @@
 							$runners_count = count($runners);
 						?>
 						<li class="metadata__item">
-							<img alt="" src="<?php echo bb_profile_avatar($runners[0
-							]); ?>" class="metadata__image">
+							<img alt="" src="<?php echo bb_profile_avatar($runners[0]); ?>" class="metadata__image">
 							<strong class="metadata__title">
 								<?php 
 									if($runners_count == 1):
@@ -55,13 +54,38 @@
 								(<a href="#">map</a>)
 							</span>
 						</li>
+						<?php 
+							if(bb_custom_field('meet_end_time') > time()): 
+						?>
 						<li class="metadata__item">
 							<strong class="metadata__title">Forecast</strong>
 							<span class="metadata__value">High: 21&deg; Low: 16&deg;</span>
 						</li>
+						<?php 
+							endif; 
+						?>
 					</ul>
 				</header>
 				<div class="content article__body">
+					<?php 
+						if(has_post_thumbnail()):
+							$image_url[0] = wp_get_attachment_image_src(get_post_thumbnail_id(), "article-small")[0];
+							$image_url[1] = wp_get_attachment_image_src(get_post_thumbnail_id(), "article-medium")[0];
+							$image_url[2] = wp_get_attachment_image_src(get_post_thumbnail_id(), "article-large")[0];
+					?>
+					<div class="article__media article__media--none">
+						<picture>
+							<!--[if IE 9]><video style="display:none;"><[endif]-->
+							<source srcset="<?php echo $image_url[0]; ?>" media="(min-width: 0px)">
+							<source srcset="<?php echo $image_url[1]; ?>" media="(min-width: 600px)">
+							<source srcset="<?php echo $image_url[2]; ?>" media="(min-width: 1024px)">
+							<!--[if IE 9]></video><![endif]-->
+							<img srcset="<?php echo $image_url[2] ?>" alt="">
+						</picture>
+					</div>
+					<?php
+						endif;
+					?>
 					<?php 
 						if(strlen(get_the_content()) > 0):
 							the_content(); 
