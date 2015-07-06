@@ -5,7 +5,9 @@
 
 	<main class="body" id="content" role="main">
 		<div class="template-error-page">
-			<img alt="" src="<?php echo get_template_directory_uri(); ?>/dst/images/error-derpy.png" class="template-error-page__image">
+			<div class="template-error-page__image">
+				<img alt="" src="<?php echo get_template_directory_uri(); ?>/dst/images/error-derpy.png">
+			</div>
 			<h1 class="template-error-page__title">We just don't know what went wrong!</h1>
 			<div class="content template-error-page__body">
 				<p>The page you were looking for doesn't exist. It might be that you clicked on a broken link, this page has been removed, or you simply typed gibberish into the address bar. Either way, this is probably not the page you were looking for.</p>
