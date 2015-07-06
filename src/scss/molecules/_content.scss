@@ -31,20 +31,18 @@
 		text-decoration: none;
 	}
 	h1, 
-	h2 {
+	h2,
+	h3 {
 		@include header-sisko;
 	}
-	h3 {
+	h4 {
 		@include header-picard;
 	}
-	h4 {
+	h5 {
 		@include header-kirk;
 	}
-	h5 {
-		@include header-archer;
-	}
 	h6 {
-		@include header-pike;
+		@include header-archer;
 	}
 	blockquote {
 		margin-left: 20px;
