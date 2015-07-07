@@ -4,30 +4,39 @@
 	*/
 	get_template_part('partials/global/html-header');
 	get_template_part('partials/global/header');
+	if(have_posts()):
+		while(have_posts()): 
+			the_post(); 
+			$runners_ids = get_field('meet_runner'); 
+			$runners_count = count($runners_ids);
+			$runners_grid = ($runners_count > 4) ? 4 : $runners_count;
+			$runners = array();
+			foreach($runners_ids as $runner) {
+				$social = array();
+				if(bb_custom_field("runner_twitter", $runner)) { $social[] = "https://twitter.com/" . bb_custom_field("runner_twitter", $runner); }
+				if(bb_custom_field("runner_facebook", $runner)) { $social[] = "https://facebook.com/" . bb_custom_field("runner_facebook", $runner); }
+				$runners[] = array(
+					"id" => $runner,
+					"name" => get_the_title($runner),
+					"biography" => bb_json_sanitiser(bb_profile_biography($runner)),
+					"avatar" => bb_profile_avatar($runner),
+					"social" => $social
+				);
+			}
 ?>
 
 	<main class="body" id="content" role="main">
 		<div class="layout">
-			<?php 
-				if(have_posts()):
-					while(have_posts()): 
-						the_post(); 
-			?>
 			<article class="article article--meet">
 				<header class="article__header">
 					<h1 class="article__title"><?php the_title(); ?></h1>
 					<ul class="metadata article__meta">
-						<?php 
-							$runners = get_field('meet_runner'); 
-							$runners_count = count($runners);
-							$runners_grid = ($runners_count > 4) ? 4 : $runners_count;
-						?>
 						<li class="metadata__item">
 							<div class="avatar-grid avatar-grid--items-<?php echo $runners_grid; ?> metadata__image">
 								<?php 
 									for($i = 0; $i < $runners_grid; $i++):
 								?>
-										<img class="avatar-grid__item" alt="<?php echo get_the_title($runners[$i]); ?>" src="<?php echo bb_profile_avatar($runners[$i]); ?>">
+										<img class="avatar-grid__item" alt="<?php echo $runners[$i]["name"]; ?>" src="<?php echo $runners[$i]["avatar"]; ?>">
 								<?php 
 									endfor;
 								?>
@@ -44,7 +53,7 @@
 							<span class="metadata__value">
 								<?php 
 									for($i = 0; $i < $runners_count; $i++):
-										echo get_the_title($runners[$i]);
+										echo $runners[$i]["name"];
 										if(!empty($runners[$i+1])):
 											echo ", ";
 										endif;
@@ -136,25 +145,27 @@
 						?>,
 						{
 							"@type": "Person",
-							"name": "<?php echo get_the_title($runner); ?>",
-							"description": "<?php echo bb_json_sanitiser(bb_profile_biography($runner)); ?>",
-							"image": "<?php echo bb_profile_avatar($runner); ?>",
-							"sameAs": [
-							]
+							"name": "<?php echo $runner['name']; ?>",
+							"description": "<?php echo $runner['biography']; ?>",
+							"image": "<?php echo $runner['avatar'] ?>",
+							"sameAs": [<?php 
+									for($i = 0; $i < count($runner["social"]); $i++):
+										if(!empty($runner["social"][$i])): echo '"' . $runner["social"][$i] . '"'; endif;
+										if(!empty($runner["social"][$i+1])): echo ", "; endif;
+									endfor;
+								?>]
 						}<?php 
 							endforeach; 
 						?>
 					]
 				}
 			</script>
-			<?php 
-					endwhile;
-				endif;
-			?>
 		</div>
 	</main>
 
 <?php
+		endwhile;
+	endif;
 	get_template_part('partials/global/footer');
 	get_template_part('partials/global/html-footer');
 ?>
