@@ -33,3 +33,14 @@ function bb_page_title() {
 	}
 	return $title;
 }
+
+/**
+ * Sanitise content for JSON.
+ * @param  string $content The string to be sanitised.
+ * @return string          The sanitised string.
+ */
+function bb_json_sanitiser($content) {
+	$content = strip_tags($content);
+	$content = trim($content);
+	return $content; 
+}

@@ -60,7 +60,7 @@
 							<strong class="metadata__title">Location</strong>
 							<span class="metadata__value">
 								<?php echo bb_meet_location(get_field('meet_location'), "name"); ?>
-								(<a href="#">map</a>)
+								(<a href="https://www.google.co.uk/maps/search/<?php echo urlencode(bb_meet_location(get_field('meet_location'), "address")); ?>">map</a>)
 							</span>
 						</li>
 						<?php 
@@ -104,6 +104,49 @@
 					?>
 				</div>
 			</article>
+			<script type="application/ld+json">
+				{
+					"@context": "http://schema.org",
+					"@type": "Event",
+					"name": "<?php the_title(); ?>",
+					"description": "<?php echo bb_json_sanitiser(get_the_excerpt()); ?>",
+<?php if(!empty($image_url[2])): ?>					"image": "<?php echo $image_url[2]; ?>",<?php endif; ?>
+					"startDate": "<?php echo date('c', bb_custom_field('meet_start_time')); ?>",
+					"endDate": "<?php echo date('c', bb_custom_field('meet_end_time')); ?>",
+					"url": "<?php the_permalink(); ?>",
+					"location": {
+						"@type": "Place",
+						"name": "<?php echo bb_meet_location(get_field('meet_location'), 'name'); ?>",
+						"address": "<?php echo bb_meet_location(get_field('meet_location'), 'address'); ?>"
+						"geo": {
+							"@type": "GeoCoordinates",
+							"latitude": "<?php echo bb_meet_location(get_field('meet_location'), 'latitude'); ?>",
+							"longitude": "<?php echo bb_meet_location(get_field('meet_location'), 'longitude'); ?>"
+						}
+					},
+					"organizer": [
+						{
+							"@type": "Organization",
+							"name": "<?php bloginfo('sitename'); ?>",
+							"logo": "",
+							"url": "<?php bloginfo('url'); ?>",
+							"email": "hello@bristolbronies.co.uk"
+						}<?php 
+							foreach($runners as $runner): 
+						?>,
+						{
+							"@type": "Person",
+							"name": "<?php echo get_the_title($runner); ?>",
+							"description": "<?php echo bb_json_sanitiser(bb_profile_biography($runner)); ?>",
+							"image": "<?php echo bb_profile_avatar($runner); ?>",
+							"sameAs": [
+							]
+						}<?php 
+							endforeach; 
+						?>
+					]
+				}
+			</script>
 			<?php 
 					endwhile;
 				endif;
