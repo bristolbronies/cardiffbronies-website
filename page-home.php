@@ -25,7 +25,7 @@
 		<?php 
 			if($meet_query->have_posts()): 
 		?>
-		<div class="meet-grid meet-grid--items-<?php echo $meet_query->post_count; ?> template-homepage__meet-grid">
+		<div class="meet-grid meet-grid--homepage meet-grid--items-<?php echo $meet_query->post_count; ?> template-homepage__meet-grid">
 			<div class="layout">
 				<?php
 					$index = 0;
@@ -72,11 +72,11 @@
 		<div class="template-homepage__intro">
 			<?php echo $home_blurb; ?>
 		</div>
-		<div class="template-homepage__social-feed">
+		<?php /* <div class="template-homepage__social-feed">
 			<div class="layout">
 				<?php bb_social_feed("bristolbronies", "443693042356765", 8); ?>
 			</div>
-		</div>
+		</div>*/ ?>
 	</main>
 
 <?php

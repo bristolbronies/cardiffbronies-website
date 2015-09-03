@@ -2,7 +2,7 @@ var app = app || {};
 
 app.meetGrid = {
 	animateGrid: function() {
-		$(".meet-grid").addClass("meet-grid--animate");
+		$(".meet-grid--homepage").addClass("meet-grid--animate");
 	}
 }
 

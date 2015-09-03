@@ -37,9 +37,6 @@
 		bottom: 0;
 		left: 0;
 		transition: filter .3s ease;
-		html.js.cssanimations & {
-			opacity: 0;
-		}
 		img {
 			width: 100%;
 			height: 100%;
@@ -65,11 +62,18 @@
 			padding: 20px;
 		}
 	}
+	&__number {
+		position: absolute;
+		bottom: 0;
+		right: 5px;
+		font-size: 62px;
+		font-style: italic;
+		line-height: 1;
+		opacity: .35;
+	}
 	&__title,
 	&__date {
-		html.js.cssanimations & {
-			opacity: 0;
-		}
+		
 	}
 	&__title {
 		@include header-sisko;
@@ -80,6 +84,25 @@
 	}
 	&__date {
 		display: block;
+	}
+	&--list-3 {
+		.meet-grid__item {
+			padding-bottom: 80%;
+			@include mq(tos) {
+				width: 50%;
+				padding-bottom: 60%;
+				float: left;
+			}
+			@include mq(tng, true) {
+				width: 33.3333%;
+				padding-bottom: 40%;
+				float: left;
+			}
+			@include mq(ds9) {
+				width: 33.3333%;
+				padding-bottom: 30%;
+			}
+		}
 	}
 	&--items-2 {
 		@include mq(tng, true) {
@@ -120,20 +143,24 @@
 			}
 		}
 	}
+	&--homepage {
+		.meet-grid__image,
+		.meet-grid__title,
+		.meet-grid__date {
+			html.js.cssanimations & {
+				opacity: 0;
+			}
+		}
+	}
 	&--animate {
 		.meet-grid__item {
-			&:nth-child(2) {
-				.meet-grid__image,
-				.meet-grid__title,
-				.meet-grid__date {
-					animation-delay: .6s;
-				}
-			}
-			&:nth-child(3) {
-				.meet-grid__image,
-				.meet-grid__title,
-				.meet-grid__date {
-					animation-delay: 1.2s;
+			@for $i from 2 through 21 {
+				&:nth-child(#{$i}) {
+					.meet-grid__image,
+					.meet-grid__title,
+					.meet-grid__date {
+						animation-delay: (0.4s * ($i - 1));
+					}
 				}
 			}
 		}

@@ -1,0 +1,25 @@
+.pagination {
+	margin: 1em 0;
+	list-style: none;
+	text-align: center;
+	&__item {
+		display: inline-block;
+	}
+	&__link {
+		display: inline-block;
+		padding: 2px 5px;
+		border: 1px solid palette(shade, lightest);
+		color: palette(shade, base);
+		text-decoration: none;
+		&:hover,
+		&:focus {
+			 border-color: palette(brand, primary);
+		}
+		&--current {
+
+		}
+	}
+	&__text {
+		font-weight: bold;
+	}
+}
