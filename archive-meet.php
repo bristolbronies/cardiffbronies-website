@@ -69,7 +69,7 @@
 					$number_end = ($number_start - $posts_per_page + 1) > 1 ? ($number_start - $posts_per_page + 1) : 1;
 			?>
 			<li class="pagination__item">
-				<a href="?paged=<?php echo $iteration + 1; ?>" class="pagination__link<?php if($i == $current_page) { echo ' pagination__link--current'; } ?>">#<?php echo $number_start; ?>&ndash;<?php echo $number_end; ?></a>
+				<a href="?paged=<?php echo $iteration + 1; ?>" class="pagination__link<?php if($iteration + 1 == $current_page) { echo ' pagination__link--current'; } ?>">#<?php echo $number_start; ?>&ndash;<?php echo $number_end; ?></a>
 			</li>
 			<?php 
 					$iteration++;
