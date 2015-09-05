@@ -62,6 +62,7 @@
 			</div>
 		</div>
 		<ul class="pagination">
+			<li class="pagination__item pagination__item--text">Meet <span class="pagination__no">N<span>o</span></span>:</li>
 			<?php 
 				$iteration = 0;
 				for($i = $posts->max_num_pages; $i > 0; $i--):

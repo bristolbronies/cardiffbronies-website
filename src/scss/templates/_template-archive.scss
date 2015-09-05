@@ -1,0 +1,11 @@
+.template-archive {
+	&__intro {
+	}
+	&__header {
+	}
+	&__title {
+		@include header-janeway;
+	}
+	&__body {
+	}
+}
