@@ -16,5 +16,5 @@ $(document).ready(function() {
 });
 
 $(window).load(function() {
-	app.ui.killAllOrphans();
+	//app.ui.killAllOrphans();
 });

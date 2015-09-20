@@ -1,6 +1,4 @@
 .meet-grid {
-	background-image: url("../images/background-texture.png");
-	background-position: center;
 	overflow: hidden;
 	.layout {
 		 width: 100%;
@@ -9,6 +7,10 @@
 	&__item {
 		padding-bottom: 40%;
 		position: relative;
+		background-color: palette(shade, dark);
+		background-image: url("../images/background-texture.png");
+		background-position: center;
+		background-size: 1000px auto;
 		overflow: hidden;
 		transform-style: preserve-3d;
 	}

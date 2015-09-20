@@ -39,3 +39,13 @@ function bb_theme_customizer($wp_customize) {
 	);
 }
 add_action('customize_register', 'bb_theme_customizer');
+
+/**
+ * Take a string and make a colour out of it 
+ * @param  $string The string to make a colour out of
+ * @return The resulting colour
+ */
+
+function bb_generate_colour($string) {
+	return '#' . substr(md5($string), 0, 6);
+}
