@@ -34,16 +34,18 @@
 							$image_url = wp_get_attachment_image_src(get_post_thumbnail_id(), "full");
 							$image_url = $image_url[0];
 						else: 
-							$image_url = "//placeponi.es/1280/720";
+							$image_url = false;
 						endif; 
 				?>
-				<article class="meet-grid__item">
+				<article class="meet-grid__item" style="background-color: <?php echo bb_generate_colour(get_the_title()); ?>">
 					<a class="meet-grid__link" href="<?php the_permalink(); ?>">
-						<div class="meet-grid__image">
-							<picture>
-								<img srcset="<?php echo $image_url; ?>" alt="">
-							</picture>
-						</div>
+						<?php if($image_url): ?>
+							<div class="meet-grid__image">
+								<picture>
+									<img srcset="<?php echo $image_url; ?>" alt="">
+								</picture>
+							</div>
+						<?php endif; ?>
 						<div class="meet-grid__body">
 							<h1 class="meet-grid__title"><?php the_title(); ?></h1>
 							<span class="meet-grid__date"><?php echo bb_meet_dates(bb_custom_field('meet_start_time')); ?></span>
@@ -69,8 +71,8 @@
 		<?php 
 			endif; 
 		?>
-		<div class="template-homepage__intro">
-			<?php echo $home_blurb; ?>
+		<div class="content template-homepage__intro">
+			<p><?php echo $home_blurb; ?></p>
 		</div>
 		<?php /* <div class="template-homepage__social-feed">
 			<div class="layout">
