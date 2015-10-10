@@ -73,14 +73,14 @@
 							</span>
 						</li>
 						<?php 
-							if(bb_custom_field('meet_end_time') > time()): 
+							/* if(bb_custom_field('meet_end_time') > time()): 
 						?>
 						<li class="metadata__item">
 							<strong class="metadata__title">Forecast</strong>
 							<span class="metadata__value">High: 21&deg; Low: 16&deg;</span>
 						</li>
 						<?php 
-							endif; 
+							endif; */
 						?>
 					</ul>
 				</header>

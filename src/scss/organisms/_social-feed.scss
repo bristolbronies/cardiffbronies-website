@@ -29,6 +29,7 @@
 		}
 	}
 	&__body {
+		overflow: hidden;
 	}
 	&__permalink {
 		color: palette(shade, base);

@@ -1,7 +1,7 @@
 	<footer class="footer" id="footer" role="contentinfo">
-		<div class="footer__billboards">
+		<?php /* <div class="footer__billboards">
 			<?php get_template_part('partials/global/billboards'); ?>
-		</div>
+		</div>*/ ?>
 		<div class="footer__boilerplate">
 			<small class="footer__legal">&copy;<?php echo date("Y"); ?> <?php echo get_bloginfo("name"); ?>. All rights reserved. Website designed and developed by <a href="http://greysadventures.com/">Grey's Adventures</a>. <em>My Little Pony: Friendship is Magic</em> is &copy; Hasbro. Bristol Bronies is not affiliated in any way with Hasbro or DHX Media. No copyright infringement intended.</small>
 			<?php

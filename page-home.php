@@ -74,11 +74,18 @@
 		<div class="content template-homepage__intro">
 			<p><?php echo $home_blurb; ?></p>
 		</div>
-		<?php /* <div class="template-homepage__social-feed">
+		<div class="template-homepage__construction">
+			<div class="layout">
+				<div class="content">
+					<p><strong>We're currently rebuilding the entire Bristol Bronies website anew!</strong> Rather than go through the long, drawn out process of rebuilding absolutely everything at once we've decided to strip the website down to just the bare essentials. The site will be receiving updates over the next few months to restore the old content.</p>
+				</div>
+			</div>
+		</div>
+		<div class="template-homepage__social-feed">
 			<div class="layout">
 				<?php bb_social_feed("bristolbronies", "443693042356765", 8); ?>
 			</div>
-		</div>*/ ?>
+		</div>
 	</main>
 
 <?php

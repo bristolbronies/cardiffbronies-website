@@ -1,5 +1,17 @@
 .article--meet {
+	max-width: none;
+	margin-right: 0;
+	margin-left: 0;
 	@include clearfix;
+	@include mq(tng, true) {
+		margin-left: 190px;
+	}
+	@include mq(ds9) {
+		margin-right: 240px;
+	}
+	@include mq(voy, true) {
+		margin-right: 320px;
+	}
 	.article__header {
 		@include mq(tng, true) {
 			margin-left: -190px;
