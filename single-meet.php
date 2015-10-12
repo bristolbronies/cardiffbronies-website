@@ -91,7 +91,7 @@
 							$image_url[1] = wp_get_attachment_image_src(get_post_thumbnail_id(), "article-medium")[0];
 							$image_url[2] = wp_get_attachment_image_src(get_post_thumbnail_id(), "article-large")[0];
 					?>
-					<div class="article__media article__media--center">
+					<div class="article__media article__media--none">
 						<picture>
 							<!--[if IE 9]><video style="display:none;"><[endif]-->
 							<source srcset="<?php echo $image_url[0]; ?>" media="(min-width: 0px)">

@@ -20,6 +20,8 @@
 	&__media {
 		margin-top: 20px;
 		margin-bottom: 20px;
+		background-color: palette(shade, lightest);
+		text-align: center;
 		&--left {
 			@include mq(tos, true) {
 				max-width: 170px;
