@@ -1,13 +1,12 @@
 @mixin body-font {
-	font-family: "Source Sans Pro", "Helvetica Neue", Arial, "Liberation Sans", sans-serif;
+	font-family: Roboto, "Helvetica Neue", Arial, "Liberation Sans", sans-serif;
 	font-size: $base-font-size;
-	font-weight: 300;
 	line-height: 1.375;
 }
 
 @mixin header-font {
-	font-family: Lato, sans-serif;
-	font-weight: 900;
+	font-family: Lora, Georgia, "Times New Roman", serif;
+	font-weight: 400;
 }
 
 @mixin header-janeway {
@@ -27,8 +26,6 @@
 @mixin header-sisko {
 	@include header-font;
 	font-size: 1.375em;
-	font-style: italic;
-	text-transform: uppercase;
 	line-height: 1.1;
 	@include mq(tng) {
 		font-size: 1.5em;
@@ -54,7 +51,6 @@
 
 @mixin header-archer {
 	@include body-font;
-	font-style: italic;
 }
 
 @mixin header-pike {

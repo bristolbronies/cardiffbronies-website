@@ -13,10 +13,10 @@
 	<meta name="author" content="<?php bloginfo("name"); ?>">
 	<meta name="copyright" content="<?php echo date("Y"); ?> <?php bloginfo("name"); ?>">
 	<meta name="description" content="<?php bloginfo("description"); ?>">
-	<meta name="geo.region" content="GB-BST">
-	<meta name="geo.placename" content="Bristol">
-	<meta name="geo.position" content="51.454513;-2.58791">
-	<meta name="ICBM" content="51.454513, -2.58791">
+	<meta name="geo.region" content="GB-CRF">
+	<meta name="geo.placename" content="Cardiff">
+	<meta name="geo.position" content="51.481581;-3.17909">
+	<meta name="ICBM" content="51.481581, -3.17909">
 
 	<!-- Icons -->
 	<link rel="apple-touch-icon" sizes="57x57" href="<?php echo get_template_directory_uri(); ?>/dst/images/favicon/apple-touch-icon-57x57.png?v=RyywKjJ0xk">
@@ -35,13 +35,12 @@
 	<link rel="icon" type="image/png" href="<?php echo get_template_directory_uri(); ?>/dst/images/favicon/favicon-16x16.png?v=RyywKjJ0xk" sizes="16x16">
 	<link rel="manifest" href="<?php echo get_template_directory_uri(); ?>/dst/images/favicon/manifest.json?v=RyywKjJ0xk">
 	<link rel="shortcut icon" href="<?php echo get_template_directory_uri(); ?>/dst/images/favicon/favicon.ico?v=RyywKjJ0xk">
-	<meta name="apple-mobile-web-app-title" content="Bristol Bronies">
-	<meta name="application-name" content="Bristol Bronies">
-	<meta name="msapplication-TileColor" content="#e02437">
+	<meta name="apple-mobile-web-app-title" content="Cardiff Bronies">
+	<meta name="application-name" content="Cardiff Bronies">
+	<meta name="msapplication-TileColor" content="#b91d47">
 	<meta name="msapplication-TileImage" content="<?php echo get_template_directory_uri(); ?>/dst/images/favicon/mstile-144x144.png?v=RyywKjJ0xk">
 	<meta name="msapplication-config" content="<?php echo get_template_directory_uri(); ?>/dst/images/favicon/browserconfig.xml?v=RyywKjJ0xk">
-	<meta name="theme-color" content="#e02437">
-	<link rel="mask-icon" href="<?php echo get_template_directory_uri(); ?>/dst/images/favicon/safari-icon.svg?v=RyywKjJ0xk" color="#e02437">
+	<meta name="theme-color" content="#b91d47">
 
 	<!-- Stylesheets -->
 	<link rel="stylesheet" href="<?php echo get_template_directory_uri(); ?>/dst/css/stylesheet.css">

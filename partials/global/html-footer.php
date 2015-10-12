@@ -6,7 +6,7 @@
 	<script type="text/javascript">
 		WebFontConfig = {
 			google: { 
-				families: [ 'Source+Sans+Pro:300,400,300italic,400italic:latin', 'Lato:900,900italic:latin' ] 
+				families: [ 'Roboto:400,400italic,700,700italic:latin', 'Lora:400,400italic:latin' ] 
 			},
 			custom: { 
 				families: [ 'Icons' ], 
@@ -26,16 +26,6 @@
 	</script>
 	<script src="<?php echo get_template_directory_uri(); ?>/dst/js/vendor.js"></script>
 	<script src="<?php echo get_template_directory_uri(); ?>/dst/js/scripts.js"></script>
-
-	<!-- Google Analytics -->
-	<script>
-		(function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
-		(i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
-		m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
-		})(window,document,'script','//www.google-analytics.com/analytics.js','ga');
-		ga('create', 'UA-34034973-1', 'auto');
-		ga('send', 'pageview');
-	</script>
 
 </body>
 </html>

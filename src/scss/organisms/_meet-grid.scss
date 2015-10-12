@@ -64,24 +64,12 @@
 			padding: 20px;
 		}
 	}
-	&__number {
-		position: absolute;
-		bottom: 0;
-		right: 5px;
-		font-size: 62px;
-		font-style: italic;
-		line-height: 1;
-		opacity: .35;
-	}
-	&__title,
-	&__date {
-		
-	}
 	&__title {
 		@include header-sisko;
 		display: inline-block;
 		width: 85%;
 		max-width: 380px;
+		margin-bottom: 4px;
 		position: relative;
 	}
 	&__date {

@@ -39,9 +39,9 @@
 		float: left;
 	}
 	&__title {
-		@include header-font;
 		display: block;
 		font-size: em-calc(12px);
+		font-weight: bold;
 		text-transform: uppercase;
 		white-space: nowrap;
 	}

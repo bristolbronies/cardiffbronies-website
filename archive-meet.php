@@ -5,7 +5,6 @@
 	$posts_per_page = 18;
 	$post_count = new WP_Query($query_string . "&posts_per_page=-1");
 	$post_count = $post_count->found_posts;
-	$post_counter = ($post_count - (($current_page - 1) * $posts_per_page));
 ?>
 
 	<main class="body" id="content" role="main">
@@ -42,7 +41,6 @@
 								</div>
 							<?php endif; ?>
 							<div class="meet-grid__body">
-								<span class="meet-grid__number">#<?php echo $post_counter; $post_counter--; ?></span>
 								<h1 class="meet-grid__title"><?php the_title(); ?></h1>
 								<span class="meet-grid__date"><?php echo bb_meet_dates(bb_custom_field('meet_start_time')); ?></span>
 							</div>

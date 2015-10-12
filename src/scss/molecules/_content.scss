@@ -17,17 +17,11 @@
 	ol {
 		padding-left: 2em;
 	}
-	em strong,
-	strong em {
-		font-weight: 600;
-		font-style: italic;
-	}
 	small,
 	del {
 		color: palette(shade, light);
 	}
 	ins {
-		font-weight: 600;
 		text-decoration: none;
 	}
 	h1, 
