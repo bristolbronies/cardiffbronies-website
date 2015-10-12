@@ -43,21 +43,6 @@
 	<meta name="theme-color" content="#e02437">
 	<link rel="mask-icon" href="<?php echo get_template_directory_uri(); ?>/dst/images/favicon/safari-icon.svg?v=RyywKjJ0xk" color="#e02437">
 
-	<!-- Facebook OpenGraph -->
-	<meta property="og:title" content="">
-	<meta property="og:description" content="">
-	<meta property="og:url" content="">
-	<meta property="og:image" content="">
-	<meta property="og:site_name" content="">
-
-	<!-- Twitter cards -->
-	<meta name="twitter:card" content="">
-	<meta name="twitter:title" content="">
-	<meta name="twitter:description" content="">
-	<meta name="twitter:image" content="">
-	<meta name="twitter:url" content="">
-	<meta name="twitter:site" content="">
-
 	<!-- Stylesheets -->
 	<link rel="stylesheet" href="<?php echo get_template_directory_uri(); ?>/dst/css/stylesheet.css">
 
