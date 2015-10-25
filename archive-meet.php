@@ -14,7 +14,7 @@
 					<h1 class="template-archive__title">Meets</h1>
 				</div>
 				<div class="content template-archive__body">
-					<p>Happening every week since July 2012, we had more meets than any brony group anywhere in the world (probably).</p>
+					<p>Find all the info on our monthly meets here!</p>
 				</div>
 			</div>
 		</div>
